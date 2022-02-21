@@ -1,0 +1,13 @@
+type Item {
+  NewField: ID
+  name: String
+  quantita: Int
+  price: Float
+}
+
+type Spesa @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  owner: String
+  itemList: Item
+  nam: String!
+}
